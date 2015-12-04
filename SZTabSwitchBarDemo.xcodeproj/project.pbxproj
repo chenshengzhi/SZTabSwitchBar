@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24892D681C1132ED00074616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D671C1132ED00074616 /* main.m */; };
+		24892D6B1C1132ED00074616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D6A1C1132ED00074616 /* AppDelegate.m */; };
+		24892D6E1C1132ED00074616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D6D1C1132ED00074616 /* ViewController.m */; };
+		24892D711C1132ED00074616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24892D6F1C1132ED00074616 /* Main.storyboard */; };
+		24892D731C1132ED00074616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24892D721C1132ED00074616 /* Assets.xcassets */; };
+		24892D761C1132ED00074616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24892D741C1132ED00074616 /* LaunchScreen.storyboard */; };
+		24892D811C1132ED00074616 /* SZTabSwitchBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D801C1132ED00074616 /* SZTabSwitchBarDemoTests.m */; };
+		24892D8C1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D8B1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m */; };
+		24892D9C1C11348D00074616 /* SZTabSwitchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D9B1C11348D00074616 /* SZTabSwitchBar.m */; };
+		E1D3E0993D45C1361A5E03A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4EA3EA7FACBF89BBCC1B05 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24892D7D1C1132ED00074616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24892D5B1C1132EC00074616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24892D621C1132ED00074616;
+			remoteInfo = SZTabSwitchBarDemo;
+		};
+		24892D881C1132ED00074616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24892D5B1C1132EC00074616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24892D621C1132ED00074616;
+			remoteInfo = SZTabSwitchBarDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24892D631C1132ED00074616 /* SZTabSwitchBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZTabSwitchBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24892D671C1132ED00074616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24892D691C1132ED00074616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		24892D6A1C1132ED00074616 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		24892D6C1C1132ED00074616 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		24892D6D1C1132ED00074616 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		24892D701C1132ED00074616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24892D721C1132ED00074616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24892D751C1132ED00074616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		24892D771C1132ED00074616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24892D7C1C1132ED00074616 /* SZTabSwitchBarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZTabSwitchBarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24892D801C1132ED00074616 /* SZTabSwitchBarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZTabSwitchBarDemoTests.m; sourceTree = "<group>"; };
+		24892D821C1132ED00074616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24892D871C1132ED00074616 /* SZTabSwitchBarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZTabSwitchBarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24892D8B1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZTabSwitchBarDemoUITests.m; sourceTree = "<group>"; };
+		24892D8D1C1132ED00074616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24892D9A1C11348D00074616 /* SZTabSwitchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTabSwitchBar.h; sourceTree = "<group>"; };
+		24892D9B1C11348D00074616 /* SZTabSwitchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTabSwitchBar.m; sourceTree = "<group>"; };
+		441C26D489655B9848FB3021 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4B4EA3EA7FACBF89BBCC1B05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		82814F3869C0B4930AE48F26 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24892D601C1132ED00074616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D3E0993D45C1361A5E03A6 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24892D791C1132ED00074616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24892D841C1132ED00074616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24892D5A1C1132EC00074616 = {
+			isa = PBXGroup;
+			children = (
+				24892D991C11348D00074616 /* SZTabSwitchBar */,
+				24892D651C1132ED00074616 /* SZTabSwitchBarDemo */,
+				24892D7F1C1132ED00074616 /* SZTabSwitchBarDemoTests */,
+				24892D8A1C1132ED00074616 /* SZTabSwitchBarDemoUITests */,
+				24892D641C1132ED00074616 /* Products */,
+				27C76325B9E1E85F687597F4 /* Pods */,
+				28DB69B4D776BCD111D43B24 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		24892D641C1132ED00074616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24892D631C1132ED00074616 /* SZTabSwitchBarDemo.app */,
+				24892D7C1C1132ED00074616 /* SZTabSwitchBarDemoTests.xctest */,
+				24892D871C1132ED00074616 /* SZTabSwitchBarDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24892D651C1132ED00074616 /* SZTabSwitchBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				24892D691C1132ED00074616 /* AppDelegate.h */,
+				24892D6A1C1132ED00074616 /* AppDelegate.m */,
+				24892D6C1C1132ED00074616 /* ViewController.h */,
+				24892D6D1C1132ED00074616 /* ViewController.m */,
+				24892D6F1C1132ED00074616 /* Main.storyboard */,
+				24892D721C1132ED00074616 /* Assets.xcassets */,
+				24892D741C1132ED00074616 /* LaunchScreen.storyboard */,
+				24892D771C1132ED00074616 /* Info.plist */,
+				24892D661C1132ED00074616 /* Supporting Files */,
+			);
+			path = SZTabSwitchBarDemo;
+			sourceTree = "<group>";
+		};
+		24892D661C1132ED00074616 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24892D671C1132ED00074616 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24892D7F1C1132ED00074616 /* SZTabSwitchBarDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				24892D801C1132ED00074616 /* SZTabSwitchBarDemoTests.m */,
+				24892D821C1132ED00074616 /* Info.plist */,
+			);
+			path = SZTabSwitchBarDemoTests;
+			sourceTree = "<group>";
+		};
+		24892D8A1C1132ED00074616 /* SZTabSwitchBarDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				24892D8B1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m */,
+				24892D8D1C1132ED00074616 /* Info.plist */,
+			);
+			path = SZTabSwitchBarDemoUITests;
+			sourceTree = "<group>";
+		};
+		24892D991C11348D00074616 /* SZTabSwitchBar */ = {
+			isa = PBXGroup;
+			children = (
+				24892D9A1C11348D00074616 /* SZTabSwitchBar.h */,
+				24892D9B1C11348D00074616 /* SZTabSwitchBar.m */,
+			);
+			path = SZTabSwitchBar;
+			sourceTree = "<group>";
+		};
+		27C76325B9E1E85F687597F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82814F3869C0B4930AE48F26 /* Pods.debug.xcconfig */,
+				441C26D489655B9848FB3021 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		28DB69B4D776BCD111D43B24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B4EA3EA7FACBF89BBCC1B05 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24892D621C1132ED00074616 /* SZTabSwitchBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24892D901C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemo" */;
+			buildPhases = (
+				B04553556E64D3FF9714F947 /* Check Pods Manifest.lock */,
+				24892D5F1C1132ED00074616 /* Sources */,
+				24892D601C1132ED00074616 /* Frameworks */,
+				24892D611C1132ED00074616 /* Resources */,
+				A526EF51D541AA91AA0633EF /* Embed Pods Frameworks */,
+				3094AF9723856698EC43B1A3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SZTabSwitchBarDemo;
+			productName = SZTabSwitchBarDemo;
+			productReference = 24892D631C1132ED00074616 /* SZTabSwitchBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24892D7B1C1132ED00074616 /* SZTabSwitchBarDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24892D931C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemoTests" */;
+			buildPhases = (
+				24892D781C1132ED00074616 /* Sources */,
+				24892D791C1132ED00074616 /* Frameworks */,
+				24892D7A1C1132ED00074616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24892D7E1C1132ED00074616 /* PBXTargetDependency */,
+			);
+			name = SZTabSwitchBarDemoTests;
+			productName = SZTabSwitchBarDemoTests;
+			productReference = 24892D7C1C1132ED00074616 /* SZTabSwitchBarDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24892D861C1132ED00074616 /* SZTabSwitchBarDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24892D961C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemoUITests" */;
+			buildPhases = (
+				24892D831C1132ED00074616 /* Sources */,
+				24892D841C1132ED00074616 /* Frameworks */,
+				24892D851C1132ED00074616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24892D891C1132ED00074616 /* PBXTargetDependency */,
+			);
+			name = SZTabSwitchBarDemoUITests;
+			productName = SZTabSwitchBarDemoUITests;
+			productReference = 24892D871C1132ED00074616 /* SZTabSwitchBarDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24892D5B1C1132EC00074616 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = shengzhichen;
+				TargetAttributes = {
+					24892D621C1132ED00074616 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					24892D7B1C1132ED00074616 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 24892D621C1132ED00074616;
+					};
+					24892D861C1132ED00074616 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 24892D621C1132ED00074616;
+					};
+				};
+			};
+			buildConfigurationList = 24892D5E1C1132EC00074616 /* Build configuration list for PBXProject "SZTabSwitchBarDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24892D5A1C1132EC00074616;
+			productRefGroup = 24892D641C1132ED00074616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24892D621C1132ED00074616 /* SZTabSwitchBarDemo */,
+				24892D7B1C1132ED00074616 /* SZTabSwitchBarDemoTests */,
+				24892D861C1132ED00074616 /* SZTabSwitchBarDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24892D611C1132ED00074616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24892D761C1132ED00074616 /* LaunchScreen.storyboard in Resources */,
+				24892D731C1132ED00074616 /* Assets.xcassets in Resources */,
+				24892D711C1132ED00074616 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24892D7A1C1132ED00074616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24892D851C1132ED00074616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3094AF9723856698EC43B1A3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A526EF51D541AA91AA0633EF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B04553556E64D3FF9714F947 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24892D5F1C1132ED00074616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24892D6E1C1132ED00074616 /* ViewController.m in Sources */,
+				24892D6B1C1132ED00074616 /* AppDelegate.m in Sources */,
+				24892D9C1C11348D00074616 /* SZTabSwitchBar.m in Sources */,
+				24892D681C1132ED00074616 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24892D781C1132ED00074616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24892D811C1132ED00074616 /* SZTabSwitchBarDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24892D831C1132ED00074616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24892D8C1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24892D7E1C1132ED00074616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24892D621C1132ED00074616 /* SZTabSwitchBarDemo */;
+			targetProxy = 24892D7D1C1132ED00074616 /* PBXContainerItemProxy */;
+		};
+		24892D891C1132ED00074616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24892D621C1132ED00074616 /* SZTabSwitchBarDemo */;
+			targetProxy = 24892D881C1132ED00074616 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24892D6F1C1132ED00074616 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24892D701C1132ED00074616 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		24892D741C1132ED00074616 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24892D751C1132ED00074616 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24892D8E1C1132ED00074616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24892D8F1C1132ED00074616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24892D911C1132ED00074616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82814F3869C0B4930AE48F26 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SZTabSwitchBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shengzhichen.SZTabSwitchBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		24892D921C1132ED00074616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 441C26D489655B9848FB3021 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SZTabSwitchBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shengzhichen.SZTabSwitchBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		24892D941C1132ED00074616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SZTabSwitchBarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shengzhichen.SZTabSwitchBarDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZTabSwitchBarDemo.app/SZTabSwitchBarDemo";
+			};
+			name = Debug;
+		};
+		24892D951C1132ED00074616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SZTabSwitchBarDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shengzhichen.SZTabSwitchBarDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZTabSwitchBarDemo.app/SZTabSwitchBarDemo";
+			};
+			name = Release;
+		};
+		24892D971C1132ED00074616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SZTabSwitchBarDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shengzhichen.SZTabSwitchBarDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SZTabSwitchBarDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		24892D981C1132ED00074616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SZTabSwitchBarDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shengzhichen.SZTabSwitchBarDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SZTabSwitchBarDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24892D5E1C1132EC00074616 /* Build configuration list for PBXProject "SZTabSwitchBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24892D8E1C1132ED00074616 /* Debug */,
+				24892D8F1C1132ED00074616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24892D901C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24892D911C1132ED00074616 /* Debug */,
+				24892D921C1132ED00074616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24892D931C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24892D941C1132ED00074616 /* Debug */,
+				24892D951C1132ED00074616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24892D961C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24892D971C1132ED00074616 /* Debug */,
+				24892D981C1132ED00074616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24892D5B1C1132EC00074616 /* Project object */;
+}
