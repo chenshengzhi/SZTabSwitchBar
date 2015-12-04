@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) UIView *indicatorView;
 
+@property (nonatomic, strong) UIView *horizontalSeperator;
+
 @property (nonatomic, strong) NSMutableArray<UILabel *> *labelArray;
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
@@ -207,7 +209,7 @@
     _highlightedTextColor = [UIColor blackColor];
     _highlightedTextFont = [UIFont boldSystemFontOfSize:16];
     
-    _seperatorColor = [UIColor grayColor];
+    _seperatorColor = [UIColor colorWithWhite:0.88 alpha:1];
     
     _indicatorColor = [UIColor redColor];
     
@@ -281,6 +283,13 @@
 }
 
 - (void)createIndicator {
+    _horizontalSeperator = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                    self.height-(1.0/[UIScreen mainScreen].scale),
+                                                                    [UIScreen mainScreen].bounds.size.width,
+                                                                    (1.0/[UIScreen mainScreen].scale))];
+    _horizontalSeperator.backgroundColor = _seperatorColor;
+    [self addSubview:_horizontalSeperator];
+    
     _indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height-_indicatorHeight, _tabWidth, _indicatorHeight)];
     _indicatorView.backgroundColor = _indicatorColor;
     if (_containerScrollView) {

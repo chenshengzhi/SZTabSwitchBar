@@ -33,7 +33,7 @@ typedef void(^SZTabSwitchBarTapBlock)(NSUInteger index);
 //默认值: YES
 @property (nonatomic) IBInspectable BOOL showVerticalSeperator;
 
-//默认值: [UIColor grayColor]
+//默认值: [UIColor colorWithWhite:0.88 alpha:1]
 @property (nonatomic, strong, nullable) IBInspectable UIColor *seperatorColor;
 
 //默认值: 10.0
