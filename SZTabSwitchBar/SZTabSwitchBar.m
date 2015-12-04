@@ -67,6 +67,7 @@
 }
 
 - (void)setCurrentIndex:(NSUInteger)currentIndex animated:(BOOL)animated {
+    NSAssert(_titleArray.count == _labelArray.count, @"should invoke -setup before -setCurrentIndex:animated:");
     if (currentIndex >= _titleArray.count) {
         currentIndex = _titleArray.count - 1;
     }
