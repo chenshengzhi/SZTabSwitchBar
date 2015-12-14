@@ -82,7 +82,7 @@
                          animations:^{
                              CGPoint contentOffset = _scrollView.contentOffset;
                              contentOffset.x = _currentIndex * _scrollView.width;
-                             _scrollView.contentOffset = contentOffset;
+                             [_scrollView setContentOffset:contentOffset animated:YES];
                              
                              if (_containerScrollView) {
                                  UILabel *label = _labelArray[_currentIndex];
