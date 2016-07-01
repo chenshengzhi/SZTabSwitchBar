@@ -12,7 +12,7 @@ typedef void(^SZTabSwitchBarTapBlock)(NSUInteger index);
 
 
 /**
- *  @brief  标签切换工具栏, 属性设置后需要调用 -setup 方法
+ *  @brief  标签切换工具栏
  */
 @interface SZTabSwitchBar : UIView
 

@@ -184,11 +184,16 @@
 - (void)reload {
     NSAssert(_titleArray, @"_titleArray = nil");
     NSAssert(_scrollView, @"_scrollView = nil");
+
+    [_labelArray enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
+    [_labelArray removeAllObjects];
     
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj removeFromSuperview];
     }];
-    
+
     [self calculateTabWidth];
     
     [self createTabs];
@@ -252,6 +257,7 @@
         self.containerScrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         self.containerScrollView.showsVerticalScrollIndicator = NO;
         self.containerScrollView.showsHorizontalScrollIndicator = NO;
+        self.containerScrollView.scrollsToTop = NO;
         [self addSubview:self.containerScrollView];
         realContainerView = self.containerScrollView;
     }
