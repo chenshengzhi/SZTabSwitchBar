@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "SZTabSwitchBar.h"
-#import "UIView+SZFrameHelper.h"
 
 @interface ViewController ()
 
@@ -54,7 +53,7 @@
                                                                              toItem:_scrollView
                                                                           attribute:NSLayoutAttributeLeft
                                                                          multiplier:1
-                                                                           constant:_scrollView.width * i];
+                                                                           constant:_scrollView.frame.size.width * i];
         NSLayoutConstraint *topConstraint = [NSLayoutConstraint constraintWithItem:view
                                                                          attribute:NSLayoutAttributeTop
                                                                          relatedBy:NSLayoutRelationEqual
@@ -83,7 +82,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    _scrollView.contentSize = CGSizeMake(_switchBar.titleArray.count * _scrollView.width, _scrollView.height);
+    _scrollView.contentSize = CGSizeMake(_switchBar.titleArray.count * _scrollView.frame.size.width, _scrollView.frame.size.height);
 }
 
 @end

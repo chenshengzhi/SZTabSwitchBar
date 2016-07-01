@@ -16,7 +16,6 @@
 		24892D811C1132ED00074616 /* SZTabSwitchBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D801C1132ED00074616 /* SZTabSwitchBarDemoTests.m */; };
 		24892D8C1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D8B1C1132ED00074616 /* SZTabSwitchBarDemoUITests.m */; };
 		24892D9C1C11348D00074616 /* SZTabSwitchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24892D9B1C11348D00074616 /* SZTabSwitchBar.m */; };
-		918357B839A916CDA4B3660A /* libPods-SZTabSwitchBarDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB05E28CECABD2112A558CA8 /* libPods-SZTabSwitchBarDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +54,6 @@
 		24892D8D1C1132ED00074616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24892D9A1C11348D00074616 /* SZTabSwitchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTabSwitchBar.h; sourceTree = "<group>"; };
 		24892D9B1C11348D00074616 /* SZTabSwitchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTabSwitchBar.m; sourceTree = "<group>"; };
-		B6B8A1186F7F6170EE06D822 /* Pods-SZTabSwitchBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZTabSwitchBarDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZTabSwitchBarDemo/Pods-SZTabSwitchBarDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D691CF85908D36A8877993D1 /* Pods-SZTabSwitchBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZTabSwitchBarDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SZTabSwitchBarDemo/Pods-SZTabSwitchBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		FB05E28CECABD2112A558CA8 /* libPods-SZTabSwitchBarDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZTabSwitchBarDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918357B839A916CDA4B3660A /* libPods-SZTabSwitchBarDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +89,6 @@
 				24892D7F1C1132ED00074616 /* SZTabSwitchBarDemoTests */,
 				24892D8A1C1132ED00074616 /* SZTabSwitchBarDemoUITests */,
 				24892D641C1132ED00074616 /* Products */,
-				948B686CBA68578AED97221A /* Pods */,
 				2D09C2967AACE340DBE5613F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -163,18 +157,8 @@
 		2D09C2967AACE340DBE5613F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB05E28CECABD2112A558CA8 /* libPods-SZTabSwitchBarDemo.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		948B686CBA68578AED97221A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D691CF85908D36A8877993D1 /* Pods-SZTabSwitchBarDemo.debug.xcconfig */,
-				B6B8A1186F7F6170EE06D822 /* Pods-SZTabSwitchBarDemo.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,12 +168,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24892D901C1132ED00074616 /* Build configuration list for PBXNativeTarget "SZTabSwitchBarDemo" */;
 			buildPhases = (
-				9EB0B3E9812F18689B6AD391 /* [CP] Check Pods Manifest.lock */,
 				24892D5F1C1132ED00074616 /* Sources */,
 				24892D601C1132ED00074616 /* Frameworks */,
 				24892D611C1132ED00074616 /* Resources */,
-				09F600A5D536A1F8623FC54B /* [CP] Embed Pods Frameworks */,
-				811853CCEB7F5E59E3591424 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,54 +285,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		09F600A5D536A1F8623FC54B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SZTabSwitchBarDemo/Pods-SZTabSwitchBarDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		811853CCEB7F5E59E3591424 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SZTabSwitchBarDemo/Pods-SZTabSwitchBarDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9EB0B3E9812F18689B6AD391 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24892D5F1C1132ED00074616 /* Sources */ = {
@@ -498,7 +431,6 @@
 		};
 		24892D911C1132ED00074616 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D691CF85908D36A8877993D1 /* Pods-SZTabSwitchBarDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SZTabSwitchBarDemo/Info.plist;
@@ -510,7 +442,6 @@
 		};
 		24892D921C1132ED00074616 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B8A1186F7F6170EE06D822 /* Pods-SZTabSwitchBarDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SZTabSwitchBarDemo/Info.plist;

@@ -7,7 +7,6 @@
 //
 
 #import "SZTabSwitchBar.h"
-#import "UIView+SZFrameHelper.h"
 
 @interface SZTabSwitchBar ()
 
@@ -88,7 +87,7 @@
                             options:(UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction)
                          animations:^{
                              CGPoint contentOffset = _scrollView.contentOffset;
-                             contentOffset.x = _currentIndex * _scrollView.width;
+                             contentOffset.x = _currentIndex * _scrollView.frame.size.width;
                              [_scrollView setContentOffset:contentOffset animated:YES];
                              
                              if (_containerScrollView) {
@@ -149,22 +148,26 @@
         if ([keyPath isEqualToString:@"contentOffset"]) {
             self.scrollViewDragging = _scrollView.dragging;
             
-            self.draggingIndex = round(_scrollView.contentOffset.x / _scrollView.width);
+            self.draggingIndex = round(_scrollView.contentOffset.x / _scrollView.frame.size.width);
             
             if (_containerScrollView) {
                 if (_scrollView.contentSize.width > 0) {
-                    _indicatorView.left = _scrollView.contentOffset.x * _containerScrollView.contentSize.width / _scrollView.contentSize.width;
-                    
+                    CGRect frame = _indicatorView.frame;
+                    frame.origin.x = _scrollView.contentOffset.x * _containerScrollView.contentSize.width / _scrollView.contentSize.width;
+                    _indicatorView.frame = frame;
+
                     if (_scrollView.dragging || _scrollView.decelerating) {
                         CGRect targetRect = CGRectMake(_scrollView.contentOffset.x * _containerScrollView.contentSize.width / _scrollView.contentSize.width,
                                                        0,
                                                        _tabWidth,
-                                                       self.height);
+                                                       self.frame.size.height);
                         [self updateContainerScrollViewOffsetWithTargetRect:targetRect];
                     }
                 }
             } else {
-                _indicatorView.left = _scrollView.contentOffset.x / _titleArray.count;
+                CGRect frame = _indicatorView.frame;
+                frame.origin.x = _scrollView.contentOffset.x / _titleArray.count;
+                _indicatorView.frame = frame;
             }
         }
     }
@@ -173,7 +176,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     if (_containerScrollView) {
-        _containerScrollView.size = self.size;
+        _containerScrollView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     }
 }
 
@@ -254,7 +257,7 @@
     }
     
     for (int i = 0; i < _titleArray.count; i++) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(i*_tabWidth, 0, _tabWidth, self.height)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(i*_tabWidth, 0, _tabWidth, self.frame.size.height)];
         label.text = [_titleArray objectAtIndex:i];
         label.textAlignment = NSTextAlignmentCenter;
         label.backgroundColor = [UIColor clearColor];
@@ -266,16 +269,16 @@
         [_labelArray addObject:label];
         
         if (_containerScrollView && i == _titleArray.count - 1) {
-            _containerScrollView.contentSize = CGSizeMake(ceil(label.right), self.containerScrollView.height);
+            _containerScrollView.contentSize = CGSizeMake(ceil(CGRectGetMaxX(label.frame)), self.containerScrollView.frame.size.height);
         }
     }
     
     if (_showVerticalSeperator) {
-        CGFloat cutOffHeight = self.height*1.0/3;
+        CGFloat cutOffHeight = self.frame.size.height*1.0/3;
         //底部垂直分割线
         for (int i=1; i<=_titleArray.count-1; i++) {
             UIView *line = [[UIView alloc] initWithFrame:CGRectMake(_tabWidth*(i),
-                                                                    round((self.height-cutOffHeight)/2),
+                                                                    round((self.frame.size.height-cutOffHeight)/2),
                                                                     .5,
                                                                     round(cutOffHeight))];
             line.backgroundColor = _seperatorColor;
@@ -286,13 +289,13 @@
 
 - (void)createIndicator {
     _horizontalSeperator = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                                    self.height-(1.0/[UIScreen mainScreen].scale),
+                                                                    self.frame.size.height-(1.0/[UIScreen mainScreen].scale),
                                                                     [UIScreen mainScreen].bounds.size.width,
                                                                     (1.0/[UIScreen mainScreen].scale))];
     _horizontalSeperator.backgroundColor = _seperatorColor;
     [self addSubview:_horizontalSeperator];
     
-    _indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height-_indicatorHeight, _tabWidth, _indicatorHeight)];
+    _indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-_indicatorHeight, _tabWidth, _indicatorHeight)];
     _indicatorView.backgroundColor = _indicatorColor;
     if (_containerScrollView) {
         [_containerScrollView addSubview:_indicatorView];
