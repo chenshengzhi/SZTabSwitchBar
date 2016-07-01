@@ -19,31 +19,31 @@ typedef void(^SZTabSwitchBarTapBlock)(NSUInteger index);
 @property (nonatomic) NSUInteger currentIndex;
 
 //默认值: [UIColor grayColor]
-@property (nonatomic, strong, nullable) IBInspectable UIColor *textColor;
+@property (nonatomic, strong, nullable) UIColor *textColor;
 
 //默认值: [UIFont systemFontOfSize:14]
 @property (nonatomic, strong, nullable) UIFont *textFont;
 
 //默认值: [UIColor blackColor]
-@property (nonatomic, strong, nullable) IBInspectable UIColor *highlightedTextColor;
+@property (nonatomic, strong, nullable) UIColor *highlightedTextColor;
 
 //默认值: [UIFont boldSystemFontOfSize:16]
 @property (nonatomic, strong, nullable) UIFont *highlightedTextFont;
 
 //默认值: YES
-@property (nonatomic) IBInspectable BOOL showVerticalSeperator;
+@property (nonatomic) BOOL showVerticalSeperator;
 
 //默认值: [UIColor colorWithWhite:0.88 alpha:1]
-@property (nonatomic, strong, nullable) IBInspectable UIColor *seperatorColor;
+@property (nonatomic, strong, nullable) UIColor *seperatorColor;
 
 //默认值: 10.0
-@property (nonatomic) IBInspectable CGFloat horizontalPaddingBetweenTextAndSeperator;
+@property (nonatomic) CGFloat horizontalPaddingBetweenTextAndSeperator;
 
 //默认值: [UIColor redColor]
-@property (nonatomic, strong, nullable) IBInspectable UIColor *indicatorColor;
+@property (nonatomic, strong, nullable) UIColor *indicatorColor;
 
 //默认值: 2.0
-@property (nonatomic) IBInspectable CGFloat indicatorHeight;
+@property (nonatomic) CGFloat indicatorHeight;
 
 @property (nonatomic, strong, nonnull) UIScrollView *scrollView;
 
@@ -51,7 +51,7 @@ typedef void(^SZTabSwitchBarTapBlock)(NSUInteger index);
 
 @property (nonatomic, copy, nullable) SZTabSwitchBarTapBlock tapHandleBlock;
 
-- (void)setup;
+- (void)reload;
 
 - (void)setCurrentIndex:(NSUInteger)currentIndex animated:(BOOL)animated;
 

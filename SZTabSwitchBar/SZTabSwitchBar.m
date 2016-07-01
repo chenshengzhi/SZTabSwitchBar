@@ -61,13 +61,20 @@
     _scrollView = nil;
 }
 
+- (void)willMoveToWindow:(UIWindow *)newWindow {
+    [super willMoveToWindow:newWindow];
+    if (newWindow) {
+        [self reload];
+    }
+}
+
 #pragma mark - 属性方法 -
 - (void)setCurrentIndex:(NSUInteger)currentIndex {
     [self setCurrentIndex:currentIndex animated:YES];
 }
 
 - (void)setCurrentIndex:(NSUInteger)currentIndex animated:(BOOL)animated {
-    NSAssert(_titleArray.count == _labelArray.count, @"should invoke -setup before -setCurrentIndex:animated:");
+    NSAssert(_titleArray.count == _labelArray.count, @"should invoke -reload before -setCurrentIndex:animated:");
     if (currentIndex >= _titleArray.count) {
         currentIndex = _titleArray.count - 1;
     }
@@ -85,11 +92,9 @@
                              [_scrollView setContentOffset:contentOffset animated:YES];
                              
                              if (_containerScrollView) {
-                                 UILabel *label = _labelArray[_currentIndex];
-                                 [_containerScrollView scrollRectToVisible:label.frame animated:YES];
+                                 [self updateContainerScrollViewOffsetWithTargetRect:_labelArray[_currentIndex].frame];
                              }
                          } completion:nil];
-        
         if (_tapHandleBlock) {
             _tapHandleBlock(self.currentIndex);
         }
@@ -151,15 +156,11 @@
                     _indicatorView.left = _scrollView.contentOffset.x * _containerScrollView.contentSize.width / _scrollView.contentSize.width;
                     
                     if (_scrollView.dragging || _scrollView.decelerating) {
-                        if (_indicatorView.left <= 0) {
-                            _containerScrollView.contentOffset = CGPointMake(0, 0);
-                        } else if (_indicatorView.left < _containerScrollView.contentOffset.x) {
-                            _containerScrollView.contentOffset = CGPointMake(_indicatorView.left, 0);
-                        } else if (_indicatorView.right > _containerScrollView.contentSize.width) {
-                            _containerScrollView.contentOffset = CGPointMake(_containerScrollView.contentSize.width - _containerScrollView.width, 0);
-                        } else if (_indicatorView.right > _containerScrollView.contentOffset.x + _containerScrollView.width) {
-                            _containerScrollView.contentOffset = CGPointMake(_indicatorView.right - _containerScrollView.width, 0);
-                        }
+                        CGRect targetRect = CGRectMake(_scrollView.contentOffset.x * _containerScrollView.contentSize.width / _scrollView.contentSize.width,
+                                                       0,
+                                                       _tabWidth,
+                                                       self.height);
+                        [self updateContainerScrollViewOffsetWithTargetRect:targetRect];
                     }
                 }
             } else {
@@ -177,7 +178,7 @@
 }
 
 #pragma mark - 外部方法 -
-- (void)setup {
+- (void)reload {
     NSAssert(_titleArray, @"_titleArray = nil");
     NSAssert(_scrollView, @"_scrollView = nil");
     
@@ -321,6 +322,17 @@
     UILabel *label = _labelArray[index];
     label.textColor = self.highlightedTextColor ? self.highlightedTextColor : self.textColor;
     label.font = self.highlightedTextFont ? self.highlightedTextFont : self.textFont;
+}
+
+- (void)updateContainerScrollViewOffsetWithTargetRect:(CGRect)targetRect {
+    CGFloat offsetX = _containerScrollView.contentOffset.x;
+    CGFloat dx = (targetRect.origin.x - offsetX) - (self.frame.size.width/2 - targetRect.size.width/2);
+    if (offsetX + dx < 0) {
+        dx = 0 - offsetX;
+    } else if (offsetX + dx > _containerScrollView.contentSize.width - _containerScrollView.frame.size.width) {
+        dx = _containerScrollView.contentSize.width - _containerScrollView.frame.size.width - offsetX;
+    }
+    [_containerScrollView setContentOffset:CGPointMake(offsetX + dx, 0)];
 }
 
 @end

@@ -1,10 +1,12 @@
 PODS:
-  - SZFrameHelper (0.0.1)
+  - SZFrameHelper (0.0.2)
 
 DEPENDENCIES:
-  - SZFrameHelper
+  - SZFrameHelper (~> 0.0.2)
 
 SPEC CHECKSUMS:
-  SZFrameHelper: 60bef7d2d011df245f0e868d8019b8e0174720bc
+  SZFrameHelper: 5a5d00269ff317cd24fd21fc4e6adf93d799ef7c
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 389408a934a5c105435bc85b109154a92c54e481
+
+COCOAPODS: 1.0.1
