@@ -322,12 +322,18 @@
 }
 
 - (void)unHighlightedLabelAtIndex:(NSUInteger)index {
+    if (index >= _labelArray.count) {
+        return;
+    }
     UILabel *label = _labelArray[index];
     label.textColor = self.textColor;
     label.font = self.textFont;
 }
 
 - (void)highlightedLabelAtIndex:(NSUInteger)index {
+    if (index >= _labelArray.count) {
+        return;
+    }
     UILabel *label = _labelArray[index];
     label.textColor = self.highlightedTextColor ? self.highlightedTextColor : self.textColor;
     label.font = self.highlightedTextFont ? self.highlightedTextFont : self.textFont;
